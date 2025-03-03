@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Word Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Text Correct & Complete</h2>  <!-- Moved outside the container for better alignment -->
+    
+    <input type="text" id="inputText" placeholder="Type a sentence..." oninput="predictWords()">
+    
+    <div id="suggestions"></div>  <!-- Suggestions appear below input -->
+    
+    <button onclick="correctGrammar()">Correct Grammar</button>
+    
+    <div id="correctedOutput"></div>  <!-- Corrected text appears here -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

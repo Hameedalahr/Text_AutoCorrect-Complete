@@ -1,0 +1,151 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;600&display=swap');
+
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: radial-gradient(circle, #0a0a2a 10%, #09092f, #030316);
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Heading */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffd700;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0px 0px 15px rgba(255, 223, 0, 1);
+    margin-bottom: 20px;
+}
+
+/* Input Field */
+input[type="text"] {
+    width: 60%;
+    padding: 14px;
+    font-size: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    outline: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #ffd700;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 20px rgba(255, 223, 0, 0.9);
+}
+
+/* Suggestion Box */
+#suggestions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.suggestion {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    text-transform: capitalize;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.3);
+}
+
+.suggestion:hover {
+    background: #ffd700;
+    color: #1e1e1e;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 223, 0, 1);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(90deg, #ffd700, #ff9100);
+    color: #1e1e1e;
+    font-size: 20px;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 12px rgba(255, 223, 0, 0.7);
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff9100, #ffd700);
+    box-shadow: 0px 0px 20px rgba(255, 223, 0, 1);
+    transform: scale(1.08);
+}
+
+/* Center Output Result */
+.corrected-sentence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Output Box */
+#correctedOutput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD700;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 0px 18px rgba(255, 223, 0, 0.8);
+    width: 60%;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    input[type="text"], #suggestions, #correctedOutput {
+        width: 90%;
+    }
+
+    button {
+        width: 90%;
+        font-size: 18px;
+    }
+}
