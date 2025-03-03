@@ -1,0 +1,6 @@
+flask
+request
+jsonify
+render_template
+torch
+transformers
